@@ -64,7 +64,7 @@
 .OUTPUTS
    Outputs an object array of vmks and ping results by packet loss.
 #>
-function Test-ESXiVmkConnection
+function Test-ESXiVMKConnection
 {
 
     Param
