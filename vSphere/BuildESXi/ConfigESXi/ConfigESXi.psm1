@@ -348,56 +348,6 @@ function Set-ESXiRoot
     }
 }
 
-function Set-ESXiDomainInfo
-{
-    [CmdletBinding()]
-    [Alias()]
-    Param
-    (   
-        [Parameter(Mandatory=$true)]
-        [ValidateNotNullOrEmpty()]
-        $ESXiIP,
-
-        [Parameter(Mandatory=$true)]
-        [ValidateNotNullOrEmpty()]
-        $ESXiName,
-
-        [ValidateNotNullOrEmpty()]
-        $DNS = ('172.31.6.136','172.31.6.137'),
-
-        [Parameter(Mandatory=$true)]
-        [ValidateNotNullOrEmpty()]
-        $Password,
-
-        [Parameter(Mandatory=$true)]
-        [ValidateNotNullOrEmpty()]
-        $ViServer,
-
-        [ValidateNotNullOrEmpty()]
-        $DomainCred = $lcred
-    )
-    Process
-    {
-        try
-        {
-            <#$Connected = Confirm-VIServerConnection -ViServer $ViServer -Credential $DomainCred
-            if ($Connected -eq $null) {
-                $VMHostNames = (Get-VMHost).Name
-                if ($VMHostNames -notcontains $ESXiName){#>
-                    Connect-VIServer $ESXiIP -User root -Password $Password | Out-Null
-                    Get-VMHostNetwork -Server $ESXiIP | 
-                    Set-VMHostNetwork -HostName $ESXiName.TrimEnd('.zhost') -DomainName 'zhost' -SearchDomain 'zhost' -DnsAddress $DNS | Out-Null                    
-                    Disconnect-VIServer -Server $ESXiIP -Confirm:$false | Out-Null
-                    <#} else {
-                        get-vmhost $ESXiName | Get-VMHostNetwork |
-                        Set-VMHostNetwork -HostName $ESXiName.TrimEnd('.zhost') -DomainName 'zhost' -SearchDomain 'zhost' -DnsAddress $DNS | Out-Null                    
-                    }
-            } else {Write-Host 'Domain info not set'}#>
-        }
-        catch {throw}
-    }
-}
-
 function Add-ESXiHost 
 {
     [CmdletBinding()]
