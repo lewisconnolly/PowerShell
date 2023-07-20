@@ -1,6 +1,6 @@
 ﻿. '\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\AlertTools.ps1'
-. '\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Join-Object.ps1'
-Import-Module "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\ChartFunctions.psm1"
+. '\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\External\Join-Object.ps1'
+Import-Module "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\External\ChartFunctions.psm1"
 
 $Server = $env:VMWARE_ALARM_VCENTER
 $Log = "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\Get-VMProcessReport.log"
