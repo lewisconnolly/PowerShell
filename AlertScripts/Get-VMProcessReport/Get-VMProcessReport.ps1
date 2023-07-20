@@ -52,7 +52,7 @@ function Get-VMProcessReport {
     
     $header += "`"><b>$env:VMWARE_ALARM_TRIGGERINGSUMMARY</b></font></li>"
 
-    $header += "<li>$($env:VMWARE_ALARM_EVENTDESCRIPTION.TrimEnd(`"'`"))</li>"
+    $header += "<li>$($env:VMWARE_ALARM_EVENTDESCRIPTION.TrimEnd("'"))</li>"
 
     $header += "<li>$($env:VMWARE_ALARM_DECLARINGSUMMARY -replace '[([\])]')</li>"
 
