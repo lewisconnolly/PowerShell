@@ -4,8 +4,8 @@ Import-Module PureStoragePowerShellSDK | Out-Null
 
 $templateDsName = 'STORE'
 
-$user = Read-Host -Prompt 'Enter zonalconnect username'
-$pw = Read-Host -AsSecureString -Prompt 'Enter zonalconnect password'
+$user = Read-Host -Prompt 'Enter domain username'
+$pw = Read-Host -AsSecureString -Prompt 'Enter domain password'
 $cred = New-Object System.Management.Automation.PSCredential ($user, $pw)
 
 if(-not$global:DefaultVIServer){

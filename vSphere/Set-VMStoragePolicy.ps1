@@ -76,7 +76,7 @@ function Set-VMStoragePolicy {
         if(!$global:DefaultVIServer){
             "$( Get-Date -Format 'dd/MM/yyyy HH:mm:ss' ) No connected VIServers" | Write-Warning
 
-            $VIServer = 'vcenter.zonalconnect.local'
+            $VIServer = 'vcenter'
 
             while($confirm -notin @('y','n')){
                 $confirm = Read-Host -Prompt "`nAttempt to connect to $VIServer ? [y/n]`n"                

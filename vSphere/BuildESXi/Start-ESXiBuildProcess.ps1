@@ -116,7 +116,7 @@
         $SMTP = 'mail.domain.local',
 
         [ValidateNotNullOrEmpty()]
-        $AlertDestination = 'lewis.connolly@zonal.co.uk',
+        $AlertDestination,
         
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]

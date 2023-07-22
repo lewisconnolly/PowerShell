@@ -147,7 +147,7 @@ function Get-VMDataProtectionStatus {
 Import-Module VMware.PowerCLI
 Import-Module C:\zts\scripts\ReportFramework\ReportFramework.psm1
 
-Connect-VIServer vcenter.zonalconnect.local | Out-Null
+Connect-VIServer vcenter | Out-Null
 
 $VMProtectionStatus = Get-VMDataProtectionStatus
 

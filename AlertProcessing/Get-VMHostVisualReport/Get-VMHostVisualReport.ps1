@@ -1,13 +1,12 @@
 ﻿############################################## NOTHING TO CHANGE HERE
 
-. "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\AlertTools.ps1"
+. "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\AlertTools.ps1"
 
 $WarningPreference = "SilentlyContinue"
 $Server = $env:VMWARE_ALARM_VCENTER
 $FROM = "dca-vcenter@somehost.com"
 $SMTP = "mail.replace.me"
 $TO = "replace@me.co.uk"
-#$TO = "lewis.connolly@zonal.co.uk"
 $Session = Connect-VIServer -Server $Server
 
 $alertGrabber = AlertGrabber # Grab alert details and generate email HTML header

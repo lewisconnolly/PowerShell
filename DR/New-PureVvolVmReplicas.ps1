@@ -26,7 +26,7 @@
 .PARAMETER DestinationFolder
     The destination folder where the replica VMs are to be registered. Must be available in the same datacenter as the target array's vVol datastore.
 .PARAMETER FlashArrayCredential
-    The credential object for the source and target Pure Storage FlashArrays. Username should not contain domain name prefix, e.g. Use "lewisc" not "zonalconnect\lewisc".
+    The credential object for the source and target Pure Storage FlashArrays. Username should not contain domain name prefix, e.g. Use "lewisc" not "domain\lewisc".
 .PARAMETER SyncProtectionGroups
     Create and replicate an on-demand snapshot from source Protection Groups before creating replica VMs.
 .PARAMETER MostRecentSnapshot

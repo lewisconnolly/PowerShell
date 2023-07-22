@@ -17,7 +17,7 @@ function Get-PureNumvVols {
     $faConnections = @()
     $faConnections += $dcafa1, $dcbfa1, $dcafa2, $dcbfa2
 
-    Connect-VIServer vcenter.zonalconnect.local | Out-Null
+    Connect-VIServer vcenter | Out-Null
 
     $faConnections | % {
 

@@ -63,7 +63,7 @@
         $ISOPath,
 
         [ValidateNotNullOrEmpty()]
-        $AlertSMTP = 'mail.zonalconnect.local',
+        $AlertSMTP,
         
         [ValidateNotNullOrEmpty()]
         $AlertDesination,
@@ -97,7 +97,7 @@
         
             # Create location for host install files
             
-            $path = (new-item -ItemType Directory -Path "\\dca-utl-nas.zonalconnect.local\e$\lewisc-stuff\ESXi_ks\$($Datacenter.Name)\$ESXiHostname" -Force).FullName
+            $path = (new-item -ItemType Directory -Path "\\dca-utl-nas\e$\lewisc-stuff\ESXi_ks\$($Datacenter.Name)\$ESXiHostname" -Force).FullName
     
             # Create hash from ESXi password
             

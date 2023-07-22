@@ -7,7 +7,6 @@ $Log = "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessRepo
 $FROM = "$Server@somehost.com"
 $SMTP = "mail.replace.me"
 $TO = "replace@me.co.uk"
-#$TO = "zalerts@zonal.co.uk"
 Connect-VIServer -Server $Server
 $alertGrabber = AlertGrabber
 $UsageType = $alertGrabber.AlertDesc.Substring($alertGrabber.AlertDesc.IndexOf('e')+2,$alertGrabber.AlertDesc.IndexOf("' ")-$alertGrabber.AlertDesc.IndexOf('e')-2)
@@ -91,11 +90,11 @@ function Get-VMProcessReport {
 
     ############################################## Send e-mail
 
-    Send-MailMessage -Body $AlertBody -From $FROM -SmtpServer $SMTP -Subject $Subject -To $TO -BodyAsHtml -Attachments "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png"
+    Send-MailMessage -Body $AlertBody -From $FROM -SmtpServer $SMTP -Subject $Subject -To $TO -BodyAsHtml -Attachments "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png"
 }
 
 #Check alerted VM has Windows OS, is on domain, and report hasn't been sent in last 2 days
-if ((($alertGrabber.AlertedObject).ExtensionData.Guest.GuestId -match 'win') -and (($alertGrabber.AlertedObject).ExtensionData.Guest.hostname -match 'zonalconnect.local')){
+if ((($alertGrabber.AlertedObject).ExtensionData.Guest.GuestId -match 'win') -and (($alertGrabber.AlertedObject).ExtensionData.Guest.hostname -match 'domain.local')){
     
     if (($alertGrabber.AlertedObject).Notes -match "$UsageType alert email"){
         
@@ -110,14 +109,14 @@ if ((($alertGrabber.AlertedObject).ExtensionData.Guest.GuestId -match 'win') -an
 
             Get-VMProcessReport
             Add-Content $Log -Value "$(get-date)`r`n$($alertGrabber.AlertedObject.name) $UsageType report sent to $TO`r`n"
-            Remove-Item \\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png
+            Remove-Item \\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png
             
         } else { Add-Content $Log -Value "$(get-date)`r`n$($alertGrabber.AlertedObject.name) $UsageType report not sent as last sent on $($LastSent.ToShortDateString()) at $($LastSent.TimeOfDay)`r`n" }
     }
     else {
         Get-VMProcessReport
         Add-Content $Log -Value "$(get-date)`r`n$($alertGrabber.AlertedObject.name) $UsageType report sent to $TO`r`n"
-        Remove-Item \\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png
+        Remove-Item \\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png
     }
 } else { Add-Content $Log -Value "$(get-date)`r`n$($alertGrabber.AlertedObject.name) $UsageType report not sent as non-Windows, not on domain or Guest OS unavailable`r`n" }
 

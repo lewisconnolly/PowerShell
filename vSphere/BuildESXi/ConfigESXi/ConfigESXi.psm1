@@ -25,7 +25,7 @@
         $NewiDRACIP,
 
         [ValidateNotNullOrEmpty()]
-        $SMTPServer = 'mail.zonalconnect.local',
+        $SMTPServer,
 
         [ValidateNotNullOrEmpty()]
         $DNS = @('172.31.6.136','172.31.6.137'),
@@ -562,7 +562,7 @@ function Set-ESXiNTP
         $ESXiHost,
 
         [ValidateNotNullOrEmpty()]
-        $NTP = 'time.zonalconnect.local'
+        $NTP
     )
     Process
     {
