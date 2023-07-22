@@ -9,7 +9,7 @@ function Check-Folder ($Paths) {
         $continue=$true
 
         if(($fldrnames -contains 'Graylog')-or(($fldrnames -contains 'RabbitMQ')-and ($fldrnames.count -le 2))){$fldrnames = $fldrnames -replace 'NonProd','CoreServices'}
-        if($fldrnames -contains 'zonalconnect.test'){$fldrnames = @('Utility','DMZ')}
+        if($fldrnames -contains 'domain.test'){$fldrnames = @('Utility','DMZ')}
         if(($fldrnames -contains 'zabbix')-or($fldrnames -contains 'F5')-or($fldrnames -contains 'SteelApp')){$fldrnames = $fldrnames -replace 'Utility','CoreServices'}
         if(($fldrnames -contains 'Test')){
             $newfldrnames = @('NB')

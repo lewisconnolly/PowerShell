@@ -30,7 +30,7 @@ function Set-ESXiiDRAC
 
             C:\Program` Files\Dell\SysMgt\rac5\racadm.exe -r $IdracIP  -u root -p $Password set iDRAC.nic.DNSRacName $iDRACName | Out-Null
             C:\Program` Files\Dell\SysMgt\rac5\racadm.exe -r $IdracIP  -u root -p $Password set iDRAC.nic.DNSDomainName zhost | Out-Null
-            C:\Program` Files\Dell\SysMgt\rac5\racadm.exe -r $IdracIP  -u root -p $Password set IDRAC.EmailAlert.1.Address zts@zonal.co.uk | Out-Null
+            C:\Program` Files\Dell\SysMgt\rac5\racadm.exe -r $IdracIP  -u root -p $Password set IDRAC.EmailAlert.1.Address replace@me.co.uk | Out-Null
             C:\Program` Files\Dell\SysMgt\rac5\racadm.exe -r $IdracIP  -u root -p $Password set IDRAC.EmailAlert.1.Enable Enabled | Out-Null
             C:\Program` Files\Dell\SysMgt\rac5\racadm.exe -r $IdracIP  -u root -p $Password set idrac.remotehosts.SMTPServerIPAddress $SmtpServer | Out-Null
             C:\Program` Files\Dell\SysMgt\rac5\racadm.exe -r $IdracIP  -u root -p $Password set idrac.remotehosts.SMTPPort 25 | Out-Null

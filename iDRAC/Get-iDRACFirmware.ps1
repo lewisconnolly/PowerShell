@@ -1,7 +1,7 @@
-###################################
-### Get-iDracFirmware           ###           
-### lewis.connolly@zonal.co.uk  ###       
-###################################
+#########################
+### Get-iDracFirmware ###           
+###  lewis.connolly   ###       
+#########################
 
 # Return VMHost firmware inventory
 

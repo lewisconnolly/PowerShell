@@ -89,8 +89,8 @@ if($newIopsLimits){
         }
     } | Out-String
     
-    $messageParameters = @{Subject = "Set-IopsTagLimits task";From = "ztsreports@zonalconnect.com";To = "zts@zonal.co.uk";SmtpServer = "mail.zonalconnect.local"}
-    #$messageParameters = @{Subject = "$scriptName task";From = "ztsreports@zonalconnect.com";To = "lewis.connolly@zonal.co.uk";SmtpServer = "mail.zonalconnect.local"}
+    $messageParameters = @{Subject = "Set-IopsTagLimits task";From = "replace@me.com";To = "replace@me.co.uk";SmtpServer = "mail.replace.me"}
+
     $body += '<br/>'
     $body += $objects | ConvertTo-Html -Fragment | Out-String    
     Send-MailMessage @messageParameters -Body $body -BodyAsHtml -Attachments $log    

@@ -87,7 +87,7 @@ $env:VMWARE_ALARM_VCENTER=$VCENTER
 
 function Write-Log {
     $AlertVars = Get-ChildItem env: | where name -like vmware* | ft -au
-    $Log = "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\AlertCreator.log"
+    $Log = "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\AlertCreator.log"
     Add-Content $Log -Value "----------------------------------------------------------------------------------"
     Add-Content $Log -Value "$(get-date)`r`nAlert triggered:$($AlertVars | out-string)Alert processed."
     Add-Content $Log -Value "----------------------------------------------------------------------------------"
@@ -97,18 +97,18 @@ switch ($env:VMWARE_ALARM_EVENTDESCRIPTION)
 {
     {$_ -like "*Virtual machine*usage*"} {
     
-        cd "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport"
+        cd "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport"
 
-        & "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\Get-VMProcessReport.ps1" | Out-Null
+        & "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\Get-VMProcessReport.ps1" | Out-Null
         
         Write-Log
     }
 
     {$_ -like "*Host*usage*"} {
 
-        cd "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMHostVisualReport\"
+        cd "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMHostVisualReport\"
 
-        & "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMHostVisualReport\Get-VMHostVisualReport.ps1" | Out-Null
+        & "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMHostVisualReport\Get-VMHostVisualReport.ps1" | Out-Null
         Write-Log
     }
 

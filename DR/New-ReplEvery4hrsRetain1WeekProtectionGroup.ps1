@@ -30,7 +30,7 @@ function New-ReplEvery4hrsRetain1WeekProtectionGroup {
     )
 
     # Connect to source array
-    $array = New-PfaArray -EndPoint ($SourceArray + '.zonalconnect.local') -Credentials $SourceArrayCredential -IgnoreCertificateError
+    $array = New-PfaArray -EndPoint ($SourceArray + '.domain.local') -Credentials $SourceArrayCredential -IgnoreCertificateError
     
     $Name | % {        
         

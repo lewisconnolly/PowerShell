@@ -1,7 +1,7 @@
-﻿##################################
-### Get-PureNumvVols           ###           
-### lewis.connolly@zonal.co.uk ###       
-##################################
+﻿########################
+### Get-PureNumvVols ###           
+###  lewis.connolly  ###       
+########################
 
 # Creates report of number of vVols on Pure Storage FlashArrays
 

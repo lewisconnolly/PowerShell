@@ -13,9 +13,9 @@ Bold text            : <b></b>
 
 $WarningPreference = "SilentlyContinue"
 $Server = 'dca-vcenter'
-$FROM = "dca-vcenter@zonalconnect.com"
-$SMTP = "mail.zonalconnect.local"
-$TO = "zts@zonal.co.uk"
+$FROM = "dca-vcenter@somehost.com"
+$SMTP = "mail.replace.me"
+$TO = "replace@me.co.uk"
 
 
 Add-PSSnapin VMware.VimAutomation.Core

@@ -19,9 +19,9 @@
 .PARAMETER DestinationFolder
     The destination folder where the replica VM is to be registered. Must be available in the same datacenter as the target array's vVol datastore.
 .PARAMETER SourceFlashArrayCredential
-    The credential object for the array of the source VM. Used when synchronising Protection Group before creation of replica VM and to recreate source Protection Group after failover. Username should not contain domain name prefix, e.g "ZONALCONNECT\lewisc".
+    The credential object for the array of the source VM. Used when synchronising Protection Group before creation of replica VM and to recreate source Protection Group after failover. Username should not contain domain name prefix, e.g "DOMAIN\lewisc".
 .PARAMETER TargetFlashArrayCredential
-    The credential object for the array of the replica VM. Used to retrieve details of failback Protection Group on target array and to remove unwanted vVols created during failover. Username should not contain domain name prefix, e.g "ZONALCONNECT\lewisc".
+    The credential object for the array of the replica VM. Used to retrieve details of failback Protection Group on target array and to remove unwanted vVols created during failover. Username should not contain domain name prefix, e.g "DOMAIN\lewisc".
 .PARAMETER SyncProtectionGroup
     Create and replicate an on-demand snapshot from the source VM Protection Group before creating the replica VM.
 .PARAMETER MostRecentSnapshot
@@ -425,11 +425,11 @@ function New-PureVvolVmReplica {
 
             if(!$global:DefaultVIServer){
                 Confirm-Continue -Warning "$( (Get-Date).ToString() ) No connected VI servers" `
-                -Prompt "`nAttempt to connect to vcenter.zonalconnect.local? [y/n]`n" `
+                -Prompt "`nAttempt to connect to vcenter? [y/n]`n" `
                 -ScriptIfNo { "`n$( (Get-Date).ToString() ) Exiting ...`n" | Write-Host; $script:exit = $true } `
                 -ScriptIfYes {
-                    "`n$( (Get-Date).ToString() ) Connecting to vcenter.zonalconnect.local ...`n" | Write-Host
-                    Connect-VIServer vcenter.zonalconnect.local | Out-Null }                           
+                    "`n$( (Get-Date).ToString() ) Connecting to vcenter ...`n" | Write-Host
+                    Connect-VIServer vcenter | Out-Null }                           
                 
                 if($exit){ return }
             }

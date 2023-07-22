@@ -33,7 +33,7 @@ function RunProxyTests ($Rows, $Credential){
         '172.31.254.50', # sg-b8-zhost10
         '172.31.254.43' # sg-b4-zhost3        
     )
-    $excelPkg = Open-ExcelPackage -Path 'C:\Users\lewis\OneDrive - Zonal Retail Data Systems Limited\Documents\Spreadsheets\dca_iscsi_issues_sep22.xlsx'
+    $excelPkg = Open-ExcelPackage -Path '<path_to_spreadsheet>'
     $columns = 69..88 | ForEach-Object {[Char]$PSItem} # ASCII code for E to X inclusive
     $results = @()
 
@@ -121,7 +121,7 @@ $vmhosts | % {
     }
 }
 
-$excelPkg = Open-ExcelPackage -Path 'C:\Users\lewis\OneDrive - Zonal Retail Data Systems Limited\Documents\Spreadsheets\dca_iscsi_issues_sep22.xlsx'
+$excelPkg = Open-ExcelPackage -Path '<path_to_spreadsheet>'
 
 $i = 0
 $rows | % {
@@ -157,7 +157,7 @@ $vmhosts | % {
     }
 }
 
-$excelPkg = Open-ExcelPackage -Path 'C:\Users\lewis\OneDrive - Zonal Retail Data Systems Limited\Documents\Spreadsheets\dca_iscsi_issues_sep22.xlsx'
+$excelPkg = Open-ExcelPackage -Path '<path_to_spreadsheet>'
 
 $i = 0
 $rows | % {

@@ -1,5 +1,5 @@
 
-$cred = Get-Credential -Message 'Enter zonalconnect.local credential'
+$cred = Get-Credential -Message 'Enter domain.local credential'
 $iscsiHosts = Import-Excel -Path (Read-Host -Prompt 'Enter path of iSCSI hosts spreadsheet')
 $resultsSheet = Read-Host -Prompt 'Enter path of iSCSI results spreadsheet'
 $tested = @()
@@ -87,7 +87,7 @@ $iscsiHosts | ? Name -NotMatch 'zrds-hsan' | % {
                     }
 
         'fa'       {
-                        if($curHost -match 'fa1'){ $array = 'dca-flasharray1.zonalconnect.local' }else{ $array = 'dca-flasharray2.zonalconnect.local' }
+                        if($curHost -match 'fa1'){ $array = 'dca-flasharray1.domain.local' }else{ $array = 'dca-flasharray2.domain.local' }
 
                         $SSHSession = New-SSHSession -ComputerName $array -Credential $cred -AcceptKey 
 

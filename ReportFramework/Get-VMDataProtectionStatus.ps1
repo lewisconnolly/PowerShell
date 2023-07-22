@@ -1,6 +1,6 @@
 ##################################
 ### Get-VMDataProtectionStatus ###
-### lewis.connolly@zonal.co.uk ###
+###       lewis.connolly       ###
 ##################################
 
 # Creates report of VMs and their array-level data protection

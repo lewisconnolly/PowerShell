@@ -1,7 +1,7 @@
-﻿##################################
-### Get-PureProtectionGroups   ###           
-### lewis.connolly@zonal.co.uk ###       
-##################################
+﻿################################
+### Get-PureProtectionGroups ###           
+###     lewis.connolly       ###       
+################################
 
 # Creates report of Pure Storage FlashArray Protection Groups returned by Get-PfaProtectionGroups
 

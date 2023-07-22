@@ -1,12 +1,12 @@
-﻿. '\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\AlertTools.ps1'
-. '\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\External\Join-Object.ps1'
-Import-Module "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\External\ChartFunctions.psm1"
+﻿. '\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\AlertTools.ps1'
+. '\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\External\Join-Object.ps1'
+Import-Module "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\External\ChartFunctions.psm1"
 
 $Server = $env:VMWARE_ALARM_VCENTER
-$Log = "\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\Get-VMProcessReport.log"
-$FROM = "$Server@zonalconnect.com"
-$SMTP = "mail.zonalconnect.local"
-$TO = "lewis.connolly@zonal.co.uk"
+$Log = "\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\Get-VMProcessReport.log"
+$FROM = "$Server@somehost.com"
+$SMTP = "mail.replace.me"
+$TO = "replace@me.co.uk"
 #$TO = "zalerts@zonal.co.uk"
 Connect-VIServer -Server $Server
 $alertGrabber = AlertGrabber

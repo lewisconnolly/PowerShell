@@ -1,6 +1,6 @@
 ﻿##################################
 ### Get-VMDataProtectionStatus ###
-### lewis.connolly@zonal.co.uk ###
+###       lewis.connolly       ###
 ##################################
 
 # Creates report of Windows servers connected to Pure Storage FlashArrays and their iSCSI related configuration

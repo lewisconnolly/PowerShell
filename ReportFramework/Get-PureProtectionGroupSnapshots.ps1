@@ -1,6 +1,6 @@
 ﻿########################################
 ### Get-PureProtectionGroupSnapshots ###           
-### lewis.connolly@zonal.co.uk       ###       
+###          lewis.connolly          ###       
 ########################################
 
 # Creates report of Pure Storage FlashArray Protection Group local and replicated snapshots

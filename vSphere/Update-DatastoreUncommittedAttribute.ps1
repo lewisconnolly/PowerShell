@@ -37,8 +37,8 @@
     Add-Content $Log -Value ($dsUncommittedCustomAtt | Out-String)
 
     #Send-MailMessage -Body ($dsUncommittedCustomAtt | ? UncommittedGB -le 100 | ConvertTo-Html -Fragment|Out-String)`
-    #-BodyAsHtml -From 'UncommittedGBReport@dcautlprdwrk01.zonalconnect.local' -SmtpServer 'mail.zonalconnect.local'`
-    #-Subject 'UncommittedGBReport' -To 'lewis.connolly@zonal.co.uk'
+    #-BodyAsHtml -From 'UncommittedGBReport@dcautlprdwrk01.domain.local' -SmtpServer 'mail.replace.me'`
+    #-Subject 'UncommittedGBReport' -To 'replace@me.co.uk'
 }
 
 Connect-VIServer -Server vcenter 3>&1 | Out-Null

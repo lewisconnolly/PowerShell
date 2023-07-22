@@ -1,6 +1,6 @@
 ########################################
 ### Get-VeeamGuestProcessingSettings ###
-###    lewis.connolly@zonal.co.uk    ###
+###         lewis.connolly           ###
 ########################################
 
 # Creates report of objects processed in Veeam backup jobs and their application-aware processing settings

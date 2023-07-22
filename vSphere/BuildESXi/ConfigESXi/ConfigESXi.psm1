@@ -75,7 +75,7 @@
                         # Alert Configuration
 
                         "iDRAC.IPMILAN.AlertEnable Enabled"
-                        "iDRAC.EmailAlert.1.address zts@zonal.co.uk"
+                        "iDRAC.EmailAlert.1.address replace@me.co.uk"
                         "iDRAC.EmailAlert.1.Enable Enabled"
                         "iDRAC.RemoteHosts.SMTPServerIPAddress $SMTPServer"
                         "iDRAC.RemoteHosts.SenderEmail $DNSRacName@zhost.local"

@@ -66,7 +66,7 @@
         $AlertSMTP = 'mail.zonalconnect.local',
         
         [ValidateNotNullOrEmpty()]
-        $AlertDesination = 'lewis.connolly@zonal.co.uk',
+        $AlertDesination,
 
         [ValidateNotNullOrEmpty()]
         $FirstBootDevice = 'HDD'

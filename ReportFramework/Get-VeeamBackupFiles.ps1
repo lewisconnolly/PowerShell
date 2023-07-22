@@ -1,7 +1,7 @@
-##################################
-###    Get-VeeamBackupFiles    ###
-### lewis.connolly@zonal.co.uk ###
-##################################
+############################
+### Get-VeeamBackupFiles ###
+###    lewis.connolly    ###
+############################
 
 # Creates report of Veeam backup files and repo usage
 function Get-VeeamBackupFiles {

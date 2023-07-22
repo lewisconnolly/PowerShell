@@ -75,7 +75,7 @@
         
         [ValidateNotNullOrEmpty()]
         $ISOPath =
-        "\\dca-utl-nas.zonalconnect.local\f$\infra-backups\ESXi_ks\DCA\VMware-VMvisor-Installer-6.7.0.update02-13006603.x86_64.iso",
+        "\\dca-utl-nas.domain.local\f$\infra-backups\ESXi_ks\DCA\VMware-VMvisor-Installer-6.7.0.update02-13006603.x86_64.iso",
 
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
@@ -113,7 +113,7 @@
         $Baseline,
 
         [ValidateNotNullOrEmpty()]
-        $SMTP = 'mail.zonalconnect.local',
+        $SMTP = 'mail.domain.local',
 
         [ValidateNotNullOrEmpty()]
         $AlertDestination = 'lewis.connolly@zonal.co.uk',
@@ -532,13 +532,13 @@
 
     ### Join domain
         
-        "`nJoining $ESXiHostname to zonalconnect.local domain`n" | Write-Host -ForegroundColor Green
+        "`nJoining $ESXiHostname to domain.local domain`n" | Write-Host -ForegroundColor Green
     
-        Get-VMHost $ESXiHostname | Get-VMHostAuthentication | Set-VMHostAuthentication -JoinDomain -Domain "ZONALCONNECT.LOCAL" -Credential $JoinDomainCredential -Confirm:0
+        Get-VMHost $ESXiHostname | Get-VMHostAuthentication | Set-VMHostAuthentication -JoinDomain -Domain "domain.local" -Credential $JoinDomainCredential -Confirm:0
 
     ### Set NTP server
 
-        "`nSetting NTP server on $ESXiHostname to time.zonalconnect.local`n" | Write-Host -ForegroundColor Green
+        "`nSetting NTP server on $ESXiHostname to time.domain.local`n" | Write-Host -ForegroundColor Green
 
         Set-ESXiNtp -ESXiHost $ESXiHostname
 

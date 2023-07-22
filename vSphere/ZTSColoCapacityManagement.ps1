@@ -1,6 +1,6 @@
 Set-ExecutionPolicy -Scope Process Bypass; Set-ExecutionPolicy -Scope LocalMachine Bypass
 Connect-VIServer vcenter | Out-Null
-$OMCred = Get-Credential -UserName 'lewisc@zonalconnect.local' -Message 'Enter password'
+$OMCred = Get-Credential -UserName 'replace@me.local' -Message 'Enter password'
 Connect-OMServer dcbutlprdvrops01 -Credential $OMCred | Out-Null
 . "\\tsclient\C\Users\lewis\OneDrive\Documents\WindowsPowerShell\Modules\vSphereScripts\Get-VIFolderPath.ps1"
 $ErrorActionPreference = 'Stop'

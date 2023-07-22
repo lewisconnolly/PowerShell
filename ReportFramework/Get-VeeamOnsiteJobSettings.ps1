@@ -1,6 +1,6 @@
 ##################################
 ### Get-VeeamOnsiteJobSettings ###
-### lewis.connolly@zonal.co.uk ###
+###       lewis.connolly       ###
 ##################################
 
 # Creates report of backup jobs on dcbutlprdvbs01 and most of their non-default settings

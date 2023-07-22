@@ -11,7 +11,6 @@ Get-ChildItem "$path\Scripts\*.ps1" | % { . $_ }
 $VMs = Get-VM -Name "VM1", "VM2", "VM3"
 
 # 3) Run config tasks that are required based on migration spreadsheet or check using below code
-#    Spreadsheet - https://zonalcouk-my.sharepoint.com/:x:/g/personal/lewis_connolly_zonal_co_uk/Ee8u89CGrUpJtvEMGzGUL7wBtxZ5V4q_oYuh8ijOQM3zdA?e=YeuaeR
 
 $VMs | select Name, Powerstate,
 @{n='UpdateVMTools';e={if($_.ExtensionData.Guest.ToolsVersionStatus -ne "guestToolsCurrent"){'Y'}else{'N'}}},

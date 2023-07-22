@@ -1,6 +1,6 @@
 ﻿###################################
 ### Get-VMRackFaultDomainReport ###           
-### lewis.connolly@zonal.co.uk  ###       
+###        lewis.connolly       ###       
 ###################################
 
 # Return report of VMs and server rack fault domain tags

@@ -4,9 +4,9 @@
 
 $WarningPreference = "SilentlyContinue"
 $Server = $env:VMWARE_ALARM_VCENTER
-$FROM = "dca-vcenter@zonalconnect.com"
-$SMTP = "mail.zonalconnect.local"
-$TO = "zalerts@zonal.co.uk"
+$FROM = "dca-vcenter@somehost.com"
+$SMTP = "mail.replace.me"
+$TO = "replace@me.co.uk"
 #$TO = "lewis.connolly@zonal.co.uk"
 $Session = Connect-VIServer -Server $Server
 

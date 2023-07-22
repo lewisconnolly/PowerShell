@@ -306,11 +306,11 @@ function New-PureVvolVmReplicas {
 
             if(!$global:DefaultVIServer){
                 Confirm-Continue -Warning "$( (Get-Date).ToString() ) No connected VI servers" `
-                -Prompt "`nAttempt to connect to vcenter.zonalconnect.local? [y/n]`n" `
+                -Prompt "`nAttempt to connect to vcenter? [y/n]`n" `
                 -ScriptIfNo { "`n$( (Get-Date).ToString() ) Exiting ...`n" | Write-Host; $script:exit = $true } `
                 -ScriptIfYes {
-                    "`n$( (Get-Date).ToString() ) Connecting to vcenter.zonalconnect.local ...`n" | Write-Host
-                    Connect-VIServer vcenter.zonalconnect.local | Out-Null
+                    "`n$( (Get-Date).ToString() ) Connecting to vcenter ...`n" | Write-Host
+                    Connect-VIServer vcenter | Out-Null
                 }                
                 
                 if($exit){ return }

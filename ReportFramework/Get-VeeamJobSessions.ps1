@@ -1,7 +1,7 @@
-##################################
-###    Get-VeeamJobSessions    ###
-### lewis.connolly@zonal.co.uk ###
-##################################
+############################
+### Get-VeeamJobSessions ###
+###    lewis.connolly    ###
+############################
 
 # Creates report of Veeam job sessions with last session and yearly metrics
 function Get-VeeamJobSessions {

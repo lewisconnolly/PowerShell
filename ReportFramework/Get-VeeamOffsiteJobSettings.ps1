@@ -1,6 +1,6 @@
 ###################################
 ### Get-VeeamOffsiteJobSettings ###
-### lewis.connolly@zonal.co.uk  ###
+###       lewis.connolly        ###
 ###################################
 
 # Creates report of copy jobs on dcbutlprdvbs01 and their pertinent settings

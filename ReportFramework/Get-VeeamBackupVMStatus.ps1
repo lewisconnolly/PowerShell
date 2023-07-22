@@ -1,7 +1,7 @@
-##################################
-###   Get-VeeamBackupVMStatus  ###
-### lewis.connolly@zonal.co.uk ###
-##################################
+###############################
+### Get-VeeamBackupVMStatus ###
+###     lewis.connolly      ###
+###############################
 
 # Creates report of VMs and their backup status in Veeam
 function Get-VeeamBackupVMStatus {

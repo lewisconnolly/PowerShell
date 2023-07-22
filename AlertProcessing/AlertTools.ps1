@@ -231,6 +231,6 @@ function Get-HTMLVMPerformanceGraph {
     $chart.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor =  [System.Drawing.Color]::LightGray
     $chart.Series[0].Color = [System.Drawing.Color]::$env:VMWARE_ALARM_NEWSTATUS
     $chart.ChartAreas["ChartArea1"].AxisY.TitleFont = New-Object System.Drawing.Font("Microsoft Sans Serif",12,[System.Drawing.FontStyle]::Regular)
-    $chart.SaveImage("\\zonalconnect\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png","png")
+    $chart.SaveImage("\\domain\FolderRedirect$\lewisc\Documents\AlertScripts\Get-VMProcessReport\PerfChart.png","png")
 
 }

@@ -114,7 +114,7 @@ function Get-VMNetworkAdapterIP {
                 "$( (Get-Date).ToString() ) No connected VIServers" | Write-Warning
 
                 while($confirm -notin @('y','n')){
-                    $confirm = Read-Host -Prompt "`nAttempt to connect to vcenter.zonalconnect.local? [y/n]`n" `
+                    $confirm = Read-Host -Prompt "`nAttempt to connect to vcenter? [y/n]`n" `
                     "" | Write-Host
                     # Warn on invalid input
                 
@@ -126,8 +126,8 @@ function Get-VMNetworkAdapterIP {
                     $exit = $true
                     return
                 } else {
-                    "`n$( (Get-Date).ToString() ) Connecting to vcenter.zonalconnect.local ...`n" | Write-Host
-                    Connect-VIServer vcenter.zonalconnect.local | Out-Null
+                    "`n$( (Get-Date).ToString() ) Connecting to vcenter ...`n" | Write-Host
+                    Connect-VIServer vcenter | Out-Null
                 }
             }
             
