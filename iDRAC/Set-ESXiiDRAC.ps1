@@ -10,7 +10,7 @@ function Set-ESXiiDRAC
         $IdracIP,
 
         [ValidateNotNullOrEmpty()]
-        $Password = 'zh0st1ng',
+        $Password,
 
         [Parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]
